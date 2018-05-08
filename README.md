@@ -34,14 +34,17 @@ My experience with Fortran is that it's easy to learn, clean (being highly modul
 
 Python is an interpreted high-level programming language for object-oriented programming. Object-oriented programming is a programming language model organized around objects rather than "actions" and data rather than logic. 
 
+Although I treated it as an object-oriented language, the syntax of the language made coding in both paradigms very easy. However, unlike Fortran, there weren't any built-in functions that allowed for numerical computations. There are, however, libraries like numpy that support these features, but they are not embedded into the language itself. Luckily, there is a strong Python community that provide a lot of unofficial documentations, tutorials, and support on stackoverflow (my best friend).
 
 ## Comparison Between Both Language
 
-Imperative programming is a programming paradigm that uses statements that change a program's state, focusing on describing how a program operates.  
+Imperative programming is a programming paradigm that uses statements that change a program's state, focusing on describing how a program operates. From this stems the paradigms I focused on in this project, procedural and object-oriented.
 
 One could argue that Fortran is now an object-oriented programming langauge, as well, because of the addition of objects, pulymorphism, and other related features added to Fortran03, but my project uses Fortran90, so for these purposes I will continue to view it as a procedural programming language.
 
-In most programs, a block of code is often re-used at several places. In order to minimize duplicating code and facilitate maintaining the code, such blocks of code should be placed within a function or subroutine. A Fortran function is similar to a mathematical function, which takes one or many parameters as inputs and returns a single output value. A Fortran subroutine is a block of code that performs some operation on the input variables, and as a result of calling the subroutine, the input variables are modified.
+Fortran has both subroutines and functions, while Python only have functions. A Fortran function is similar to a mathematical function, which takes one or many parameters as inputs and returns a single output value. A Fortran subroutine is a block of code that performs some operation on the input variables, and as a result of calling the subroutine, the input variables are modified. In Python, functions don't technically need to return anything, so it might be safe to say that a Python function acts as a Fortran subroutine and function.
+
+As for objects, in Fortran, modules may contain data, but there is no notion of separate instances of a module. In order to obtain class-like behavior like in Python, you can combine a module, which contains the methods that operate on the class, with a derived type containing the data. There can be separate “instances” of the type in that we can allocate many variables of that type which can be passed as parameters to the methods contained in the module.
 
 ## Example 1: Gaussian Elimination
 In linear algebra, Gaussian elimination (also known as row reduction) is an algorithm for solving systems of linear equations. It is usually understood as a sequence of operations performed on the corresponding matrix of coefficients. This method can also be used to find the rank of a matrix, to calculate the determinant of a matrix, and to calculate the inverse of an invertible square matrix.
